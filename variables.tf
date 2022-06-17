@@ -269,6 +269,7 @@ variable "glue_crawler_jdbc_target" {
 variable "glue_crawler_s3_target" {
   description = "(Optional) List nested Amazon S3 target arguments."
   default     = []
+  type        = list
 }
 
 variable "glue_crawler_catalog_target" {
@@ -279,11 +280,13 @@ variable "glue_crawler_catalog_target" {
 variable "glue_crawler_schema_change_policy" {
   description = "(Optional) Policy for the crawler's update and deletion behavior."
   default     = []
+  type        = list
 }
 
 variable "glue_crawler_recrawl_policy" {
   description = "Optional) A policy that specifies whether to crawl the entire dataset again, or to crawl only folders that were added since the last crawler run."
   default     = []
+  type        = list
 }
 
 variable "glue_crawler_mongodb_target" {
