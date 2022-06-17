@@ -269,6 +269,7 @@ variable "glue_crawler_jdbc_target" {
 variable "glue_crawler_s3_target" {
   description = "(Optional) List nested Amazon S3 target arguments."
   default     = []
+  type        = list
 }
 
 variable "glue_crawler_catalog_target" {
