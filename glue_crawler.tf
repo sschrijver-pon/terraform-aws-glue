@@ -37,7 +37,7 @@ resource "aws_glue_crawler" "glue_crawler" {
 
   dynamic "s3_target" {
     iterator = s3_target
-    for_each = jsondecode(var.glue_crawler_s3_target)
+    for_each = var.glue_crawler_s3_target
 
     content {
       path       = lookup(s3_target.value, "path", null)
