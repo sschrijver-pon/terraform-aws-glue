@@ -284,6 +284,7 @@ variable "glue_crawler_schema_change_policy" {
 variable "glue_crawler_recrawl_policy" {
   description = "Optional) A policy that specifies whether to crawl the entire dataset again, or to crawl only folders that were added since the last crawler run."
   default     = []
+  type        = list
 }
 
 variable "glue_crawler_mongodb_target" {
